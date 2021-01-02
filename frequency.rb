@@ -1,6 +1,6 @@
 require_relative "../tdl/tdl.rb"
 TdlBuild.frequency(__dir__) do 
-    input   - 'in_signal'
+    input   - 'in_signal'  ## 采样输入
     input   - 'clock'
     input   - 'rst_n'
     output.logic[16]  - 'freq'
@@ -50,7 +50,7 @@ TdlBuild.frequency(__dir__) do
             scnt    <= 0.A 
         end
         ELSE do 
-            scnt    <= scnt
+            scnt    <= scnt  + 1.b1
         end
     end
 

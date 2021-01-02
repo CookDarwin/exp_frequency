@@ -66,7 +66,7 @@ always_ff@(posedge in_signal,negedge rst_n) begin
          scnt <= '0;
     end
     else begin
-         scnt <= scnt;
+         scnt <= ( scnt+1'b1);
     end
 end
 
